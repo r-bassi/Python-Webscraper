@@ -22,10 +22,25 @@ def simple_get(url):
 def is_good_response(resp):
     content_type = resp.headers['Content-Type'].lower()
     return (resp.status_code == 200
-            and content_type is not None 
+            and content_type is not None
             and content_type.find('html') > -1)
 
 
 # Prints errors
 def log_error(e):
     print(e)
+
+
+# Downloads page of quotes and returns the main page quotes.
+def get_quotes():
+    url = 'http://quotes.toscrape.com/'
+    response = simple_get(url)
+
+    if response is not None:
+        html = BeautifulSoup(response, 'html.parser')
+        quotes = html.find_all('span', class_='text')
+        for quotes in quotes:
+            print(quotes.text, end='\n' * 2)
+
+    # Raise an exception if we failed to get any data from the url
+    raise Exception('Error retrieving contents at {}'.format(url))
