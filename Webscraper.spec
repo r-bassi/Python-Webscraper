@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['Webscraper.py'],
-             pathex=['/Users/r-bassi/Documents/GitHub/Python-Webscraper'],
+             pathex=['/Users/r-bassi/Documents/GitHub/Python-Quote-Webscraper'],
              binaries=[],
              datas=[],
              hiddenimports=[],

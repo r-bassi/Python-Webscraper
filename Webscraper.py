@@ -1,5 +1,3 @@
-#!/Users/r-bassi/Documents/GitHub/Python-Webscraper/env/bin/python
-
 from requests import get
 from requests.exceptions import RequestException
 from contextlib import closing
