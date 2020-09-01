@@ -1,4 +1,4 @@
-This project was created using [pipenv] (https://pypi.org/project/pipenv/) for Python
+This project was created using pipenv (https://pypi.org/project/pipenv/) for Python
 
 ## Python Webscraper
 
